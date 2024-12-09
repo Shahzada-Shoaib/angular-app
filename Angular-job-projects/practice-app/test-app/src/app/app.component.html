@@ -36,6 +36,9 @@
 
   <!-- Third Div -->
   <div class="m-6 border w-[250px] p-6 bg-blue-300 space-y-6">
+    
+
+    
     <div>
       @if(dayName == "mon"){
       <p>Monday</p>
@@ -57,6 +60,8 @@
       }
       @else if (dayName == "sun"){
       <p>Sunday</p>
+      }@else {
+      <p> wrong entry</p>
       }
     </div>
     <input class="p-2 bg-white rounded-md" placeholder="type a day e.g 'mon'" [(ngModel)]="dayName" maxlength="3">
@@ -80,7 +85,28 @@
 <ng-template #loginMessage>
   <div> isDivVisible is false </div>
 </ng-template>
-=============
+============================
+<!-- printing cityList with For Loop -->
+<div class="row">
+  <div class="p-3 col-3">
+    <ul> 
+        @for(city of cityList; track $index){
+          <li>{{city}}</li>
+        } 
+    </ul>
+  </div>
+</div>
+=====
+<div class="row">
+  <div class="p-3 col-3">
+    @for(city of cityList; track $index){
+      <button class="p-4 mx-6 border rounded-lg bg-slate-200">{{city}}</button>
+    }
+  </div>
+</div>
+
+
+
 
 
 

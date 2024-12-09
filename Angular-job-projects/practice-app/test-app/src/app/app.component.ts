@@ -23,6 +23,8 @@ export class AppComponent {
   inputvalue: string = '';
   dayName:string = '';
 
+  cityList: string[]=['Lahore','Karachi','Islamabad','Peshawar'];
+
   showHideDiv(isShow: boolean){
   
     this.isDivVisible = isShow;
