@@ -1,0 +1,67 @@
+<div class="m-6 gap-6 border p-6 bg-blue-100 w-[250px]">
+  @if(isDivVisible === true){
+  <div class="w-[200px] h-[50px] bg-black text-white"> Im Number 1</div>
+  }
+  @else {
+    <p> Jani what is this</p>
+  }
+
+
+<div class=" flex gap-4 m-6">
+  <div>
+    <button class=" border border-black rounded-md p-2 bg-red-400" (click)="showHideDiv(true)"> Show </button>
+  </div>
+
+  <div></div>
+  <button class=" border border-black rounded-md p-2 bg-blue-700" (click)="showHideDiv(false)"> Hide </button>
+</div>
+
+</div>
+
+
+<div class="m-6 border w-[250px] p-6 bg-slate-300">
+  <div class="w-[200px] h-[50px] bg-red-800 text-white"> I'm Number 2</div>
+  
+
+  <div class=" flex gap-4 m-6">
+    <div>
+      <button class=" border border-black rounded-md p-2 bg-red-400" (click)="showHideDiv(true)"> Show </button>
+    </div>
+  
+    <div></div>
+    <button class=" border border-black rounded-md p-2 bg-blue-700" (click)="showHideDiv(false)"> Hide </button>
+  </div>
+
+</div>
+
+
+==========================
+<!-- 
+<div [style.display]=" isDivVisible? 'block' : 'none'" >
+  <div class="w-[200px] h-[50px] bg-red-800 text-white"> I'm Number </div>
+</div>
+<div ngIf="isDivVisible; else loginMessage">Welcome back!</div>
+<ng-template #loginMessage>
+  <div>Please log in to continue.</div>
+</ng-template>
+
+<div>
+<button class=" border border-black rounded-md p-2 bg-blue-700" (click)="hideWithCssClass()"> {{buttonText}} </button>
+</div> -->
+
+============================
+
+<div *ngIf="isDivVisible ">
+  <div class="w-[200px] h-[50px] bg-red-800 text-white"> I'm Number </div>
+</div>
+
+<div *ngIf="isDivVisible; else loginMessage">Welcome back!</div>
+<ng-template #loginMessage>
+  <div> isDivVisible is false </div>
+</ng-template>
+=============
+
+
+
+
+
