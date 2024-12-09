@@ -1,11 +1,12 @@
 import { RouterOutlet } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,11 +14,14 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'test-app';
 
+
  
 
   isDivVisible: boolean = true;
 
-  buttonText = 'Hide';
+  buttonText: string = 'Hide';
+  inputvalue: string = '';
+  dayName:string = '';
 
   showHideDiv(isShow: boolean){
   
