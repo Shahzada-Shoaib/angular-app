@@ -104,6 +104,68 @@
     }
   </div>
 </div>
+================
+<div>
+  @for(city of cityList; track $index){
+    <input class="m-4 border" [value]="city">
+  }
+</div>
+================
+<div class="">
+  <table>
+    <thead>
+      <tr>
+        <th>Sr.no </th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th>Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+        @for(item of studentList; track $index){
+          <tr class="gap-4">
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.city}}</td>
+            <td [style.background-color]="item.isActive?'red':'green'">
+              
+                <span *ngIf="item.isActive"> Student is Active</span>
+                <span *ngIf="!item.isActive"> Student is Not Active</span> 
+             
+            </td>
+          </tr>
+
+          
+        }
+        
+      
+    </tbody>
+  </table>
+</div>
+=============
+<!-- studentList is an array created in .ts file -->
+<div >
+  <p> Drop Down Menu</p>
+  <select class="px-6 border">
+    @for(item of studentList; track $index){
+    <option [value]="item.stuID">{{item.city}} </option>
+    }
+  </select>
+
+  <select class="px-6 border">
+    @for(item of studentList; track $index){
+    <option [value]="item.stuID">{{item.name}} </option>
+    }
+  </select>
+</div>
+
+
+===========
+
 
 
 
