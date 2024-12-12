@@ -2,11 +2,12 @@ import { RouterOutlet } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { GetApiComponent } from './get-api/get-api.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule],
+  imports: [RouterOutlet, CommonModule, FormsModule, GetApiComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
