@@ -1,8 +1,11 @@
 <router-outlet></router-outlet>
-<app-get-api></app-get-api>
-<div class="flex">
+
+
+<!-- <app-get-api></app-get-api> -->
   <!-- First div -->
-  <div class="m-6 gap-6 border p-6 bg-blue-100 w-[250px]">
+<div class="flex">
+   
+  <!-- <div class="m-6 gap-6 border p-6 bg-blue-100 w-[250px]">
     @if(isDivVisible === true){
     <div class="w-[200px] h-[50px] bg-black text-white"> Im Number 1</div>
     }
@@ -18,12 +21,12 @@
       <div></div>
       <button class="p-2 bg-blue-700 border border-black rounded-md " (click)="showHideDiv(false)"> Hide </button>
     </div>
-  
+   -->
   </div>
   
   <!-- Second Div -->
 
-  <div class="m-6 border w-[250px] p-6 bg-slate-300 space-y-6">
+  <!-- <div class="m-6 border w-[250px] p-6 bg-slate-300 space-y-6">
     <div>
       @if(inputvalue == "hello"){
       <div class="w-[200px] h-[50px] bg-red-800 text-white"> I'm Number 2</div>
@@ -34,10 +37,10 @@
     </div>
     <input class="p-2 bg-white rounded-md" placeholder="type 'hello' " [(ngModel)]="inputvalue" >
   
-  </div>
+  </div> -->
 
   <!-- Third Div -->
-  <div class="m-6 border w-[250px] p-6 bg-blue-300 space-y-6">
+  <!-- <div class="m-6 border w-[250px] p-6 bg-blue-300 space-y-6">
     
 
     
@@ -71,13 +74,13 @@
   </div>
   
 </div>
-
+ -->
 
 
 
 ============================
 
-<div *ngIf="isDivVisible" class="m-6">
+<!-- <div *ngIf="isDivVisible" class="m-6">
   <div class="w-[200px] h-[50px] bg-red-800 text-white"> I'm Red </div>
   <div class="w-[300px] h-[50px] bg-pink-200 text-white"> I'm Pink </div>
   <div class="w-[400px] h-[50px] bg-blue-800 text-white"> I'm Blue </div>
@@ -86,10 +89,10 @@
 <div *ngIf="isDivVisible; else loginMessage">Welcome back!</div>
 <ng-template #loginMessage>
   <div> isDivVisible is false </div>
-</ng-template>
+</ng-template> -->
 ============================
 <!-- printing cityList with For Loop -->
-<div class="row">
+<!-- <div class="row">
   <div class="p-3 col-3">
     <ul> 
         @for(city of cityList; track $index){
@@ -97,23 +100,23 @@
         } 
     </ul>
   </div>
-</div>
+</div> -->
 =====
-<div class="row">
+<!-- <div class="row">
   <div class="p-3 col-3">
     @for(city of cityList; track $index){
       <button class="p-4 mx-6 border rounded-lg bg-slate-200">{{city}}</button>
     }
   </div>
-</div>
+</div> -->
 ================
-<div>
+<!-- <div>
   @for(city of cityList; track $index){
     <input class="m-4 border" [value]="city">
   }
-</div>
+</div> -->
 ================
-<div class="">
+<!-- <div class="">
   <table>
     <thead>
       <tr>
@@ -147,10 +150,12 @@
       
     </tbody>
   </table>
-</div>
+</div> -->
 =============
 <!-- studentList is an array created in .ts file -->
-<div >
+
+
+<!-- <div >
   <p> Drop Down Menu</p>
   <select class="px-6 border">
     @for(item of studentList; track $index){
@@ -163,7 +168,7 @@
     <option [value]="item.stuID">{{item.name}} </option>
     }
   </select>
-</div>
+</div> -->
 
 
 ===========
