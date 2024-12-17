@@ -78,7 +78,9 @@ export class FormsComponent implements OnInit {
    }
     
   }
-
+ new(){
+  
+ }
   
 
 
